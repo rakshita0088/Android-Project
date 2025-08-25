@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+package="com.example.autovault">
+
+<uses-feature
+    android:name="android.hardware.type.automotive"
+    android:required="true" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_DOCUMENTS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+
+    <uses-permission android:name="android.car.permission.ACCESS_CAR_PROPERTY"/>
+    <uses-permission android:name="android.car.permission.CAR_ENERGY"/>
+    <uses-permission android:name="android.car.permission.CAR_FUEL"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.car.permission.READ_CAR_EVINFORMATION"/>
+    <uses-permission android:name="android.car.permission.READ_CAR_ENERGY"/>
+    <uses-permission android:name="android.car.permission.READ_CAR_PROPERTY"/>
+    <uses-permission android:name="android.car.permission.VEHICLE_PROPERTIES" />
+    <uses-permission android:name="android.car.permission.CAR_POWERTRAIN" />
+
+
+
+
+    <application
+    android:allowBackup="true"
+    android:appCategory="audio"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    android:supportsRtl="true"
+    android:theme="@style/Theme.AutoVault">
+
+        <service android:name="androidx.work.impl.background.systemjob.SystemJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="true" />
+
+        <receiver
+            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+            android:enabled="true"
+            android:exported="false" />
+
+    <activity
+        android:name=".MainActivity"
+        android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+
+</application>
+</manifest>
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<manifest xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    package="com.example.autovault">-->
+
+    <!--    <uses-feature-->
+    <!--        android:name="android.hardware.type.automotive"-->
+    <!--        android:required="true" />-->
+    <!--    <uses-feature-->
+    <!--        android:name="android.hardware.telephony"-->
+    <!--        android:required="false" />-->
+
+    <!--    <uses-permission android:name="android.permission.SEND_SMS" />-->
+    <!--    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
+    <!--    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
+    <!--    <uses-permission android:name="android.permission.INTERNET"/>-->
+    <!--    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />-->
+    <!--    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />-->
+    <!--    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />-->
+    <!--    <uses-permission android:name="android.permission.READ_MEDIA_DOCUMENTS" />-->
+
+    <!--    <application-->
+    <!--        android:allowBackup="true"-->
+    <!--        android:appCategory="audio"-->
+    <!--        android:icon="@mipmap/ic_launcher"-->
+    <!--        android:label="@string/app_name"-->
+    <!--        android:roundIcon="@mipmap/ic_launcher_round"-->
+    <!--        android:supportsRtl="true"-->
+    <!--        android:theme="@style/Theme.AutoVault">-->
+
+    <!--        &lt;!&ndash; 👇 Paste this inside <application> &ndash;&gt;-->
+    <!--        <provider-->
+    <!--            android:name="androidx.core.content.FileProvider"-->
+    <!--            android:authorities="com.example.autovault"-->
+    <!--            android:exported="false"-->
+    <!--            android:grantUriPermissions="true">-->
+    <!--            <meta-data-->
+    <!--                android:name="android.support.FILE_PROVIDER_PATHS"-->
+    <!--                android:resource="@xml/file_paths" />-->
+    <!--        </provider>-->
+
+    <!--        <activity-->
+    <!--            android:name=".MainActivity"-->
+    <!--            android:exported="true">-->
+    <!--            <intent-filter>-->
+    <!--                <action android:name="android.intent.action.MAIN" />-->
+    <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+    <!--            </intent-filter>-->
+    <!--        </activity>-->
+
+    <!--    </application>-->
+    <!--</manifest>-->

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "555540045292",
+    "project_id": "autovault-555",
+    "storage_bucket": "autovault-555.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:555540045292:android:379b60de222414acee34c9",
+        "android_client_info": {
+          "package_name": "com.example.autovault"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2EeZWn8dVSxbG2hLaY37eq1YAfwpTYZQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:555540045292:android:698006217b704126ee34c9",
+        "android_client_info": {
+          "package_name": "com.example.autovaultlistener"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2EeZWn8dVSxbG2hLaY37eq1YAfwpTYZQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
